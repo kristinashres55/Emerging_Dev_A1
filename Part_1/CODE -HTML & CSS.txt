@@ -1,0 +1,274 @@
+HTML CODE
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox and Grid Demonstration</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="flex-header">
+      <div class="header-item">Logo</div>
+      <div class="header-item">Navigation</div>
+      <div class="header-item">Contact</div>
+    </header>
+    <h1>Flexbox and Grid</h1>
+    <section>
+      <h2>Basic Flex box</h2>
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+      </div>
+    </section>
+    <section>
+      <h2 style="text-align: center">Align-items:Center</h2>
+      <div class="align-items">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+    </section>
+    <section>
+      <h2 style="text-align: center">Flex Direction:Column</h2>
+      <div class="flex-direction">
+        <div class="flex-item">Frontend Developer</div>
+        <div class="flex-item">Quality Assurance</div>
+        <div class="flex-item">Data Analyst</div>
+        <div class="flex-item">NodeJS Developer</div>
+        <div class="flex-item">Java Developer</div>
+        <div class="flex-item">UI/UX designer</div>
+      </div>
+    </section>
+    <section>
+      <h2>Flex Wrap</h2>
+      <div class="flex-wrap">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grid</h2>
+      <div class="grid-container">
+        <div class="grid-item">HTML</div>
+        <div class="grid-item">CSS</div>
+        <div class="grid-item">Java</div>
+        <div class="grid-item">Pyhton</div>
+        <div class="grid-item">Javascript</div>
+        <div class="grid-item">MySQL</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grid with Different Row Sizes</h2>
+      <div class="grid-different-rows">
+        <div class="grid-item-row">1</div>
+        <div class="grid-item-row">2</div>
+        <div class="grid-item-row">3</div>
+        <div class="grid-item-row">4</div>
+        <div class="grid-item-row">5</div>
+        <div class="grid-item-row">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grid with Different Column Sizes</h2>
+      <div class="grid-different-columns">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grid with span column and rows</h2>
+      <div class="grid-container-main">
+        <div class="grid-item item-1">1</div>
+        <div class="grid-item item-2">2</div>
+        <div class="grid-item item-3">3</div>
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+        <div class="grid-item item-6">6</div>
+      </div>
+    </section>
+
+    <footer class="flex-footer">
+      <div>© 2025 My Website</div>
+      <div>Privacy Policy</div>
+    </footer>
+  </body>
+</html>
+
+
+CSS CODE
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Flexbox Header */
+.flex-header {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  background-color: #f4f4f4;
+  padding: 16px;
+  border-bottom: 2px solid #ddd;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.header-item {
+  flex: 1; /* Flex-grow property */
+  text-align: center;
+  padding: 8px;
+}
+
+.flex-container {
+  display: flex;
+
+  gap: 10px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.flex-item {
+  background-color: #f9f9f9;
+  border: 1px solid #888;
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.flex-direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.flex-direction .flex-item {
+  background-color: #d9ead3;
+  width: 50%;
+}
+
+.flex-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.align-items {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  padding: 20px;
+  gap: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+}
+
+.grid-different-rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 100px 150px;
+  gap: 10px;
+  background-color: #fafafa;
+  padding: 20px;
+  border: 2px solid #ccc;
+}
+
+.grid-different-rows .grid-item-row {
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #888;
+}
+
+.grid-different-columns {
+  display: grid;
+  grid-template-columns: 500px 300px 700px;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fafafa;
+  border: 2px solid #ccc;
+}
+
+.grid-different-columns .grid-item {
+  display: grid;
+  background-color: #f4cccc;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #888;
+}
+
+.grid-container-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+}
+
+.item-1 {
+  grid-column: span 2; /* Span 2 columns */
+  background-color: #cfe2f3;
+}
+
+.item-2 {
+  grid-row: span 2; /* Span 2 rows */
+  background-color: #f4cccc;
+}
+
+.item-3 {
+  grid-row: span 2; /* Span 2 rows */
+  background-color: #d9ead3;
+}
+
+.flex-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 40px;
+  gap: 10px;
+}
+
+.flex-footer div {
+  flex: 1;
+  text-align: center;
+}
+
